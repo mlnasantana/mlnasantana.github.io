@@ -1,64 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Bem-vindo ao Meu Portfólio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">Sobre Mim</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="about">
-        <h2>Sobre Mim</h2>
-        <p>Olá, sou um desenvolvedor frontend junior com paixão por criar interfaces bonitas e funcionais. Tenho experiência em HTML, CSS e JavaScript.</p>
-    </section>
-    
-    <section id="projects">
-        <h2>Projetos</h2>
-        <div class="project">
-            <h3>Projeto 1</h3>
-            <p>Descrição do projeto 1.</p>
-        </div>
-        <div class="project">
-            <h3>Projeto 2</h3>
-            <p>Descrição do projeto 2.</p>
-        </div>
-        <div class="project">
-            <h3>Projeto 3</h3>
-            <p>Descrição do projeto 3.</p>
-        </div>
-    </section>
-    
-    <section id="contact">
-        <h2>Contato</h2>
-        <form id="contactForm">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title >Dev Folio</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#home">
+                        <div class="nav__logo">
+                            <h1>Dev <span>fólio</span></h1>
+                        </div>
+                     </a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">Sobre</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Habilidades</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Trabalhos</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link button-nav">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h3 class="home__title">Olá! Sou a <span class="home__title home__title-color">Milena Santana</span></h3>
+                    <p>Desenvolvedora Front-end</p>
+                    <a href="#contact" class="button">Contactar</a>
+                </div>
+
+                <div class="home__img">    
+                    <img src="assets/img/image-inicial.png" alt="ERROR: imagem nao encontrada!">
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">Sobre</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/mlna.jpg" class="img" alt="ERROR: Imagem nao encontrada!">
+                    </div>
+                    
+                    <div >
+                       
+                        <p class="about__text" style="text-align: justify;  ">
+                            Sou a <strong>Milena Santana</strong>! Tenho 21 anos e 
+                            curso
+                            <strong>Ciência da Computação</strong> na <strong>UFOP</strong>.
+                        </p>
+                        <p class="about__text" style="text-align: justify;  ">
+                            Sou uma entusiasta de tecnologia apaixonada por aprendizado contínuo e resolução de problemas. Criativa, resiliente e determinada, absorvo novos conceitos rapidamente e trabalho bem em grupo.
+                            <div class="home__social" style="margin: 10px;">
+                                <a target="_blank" href="https://www.linkedin.com/in/mlnasantana" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                                <a target="_blank" href="https://www.facebook.com/milena.santanaalmeida/" class="home__social-icon"><i class='bx bxl-facebook' ></i></a>
+                                <a target="_blank" href="https://github.com/mlnasantana" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                            </div>
+                            <a href="#contact" class="button">Contactar</a>
+                        </p>
+                      </div>                                   
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title"> <strong>Habilidades</strong></h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                
+                                <span class="skills__name">JavaScript</span>
+                            </div>
+                            <div class="skills_back">
+                            </div>
+                            <div class="skills__bar skills__js">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">80%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <span class="skills__name">HTML5</span>
+                            </div>
+                            <div class="skills_back">
+                            </div>
+                            <div class="skills__bar skills__html">
+                            </div>
+                            <div>
+                                <span class="skills__percentage">90%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                
+                                <span class="skills__name">React Js</span>
+                            </div>
+                            <div class="skills_back">
+                            </div>
+                            <div class="skills__bar skills__reactnjs">
+                            </div>
+                            <div>
+                                <span class="skills__percentage">75%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <span class="skills__name"> React Native
+                                </span>
+                            </div>
+                            <div class="skills_back">
+                            </div>
+                            <div class="skills__bar skills__react">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>   
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                
+                                <span class="skills__name">Node Js
+                                </span>
+                            </div>
+                            <div class="skills_back">
+                            </div>
+                            <div class="skills__bar skills__node">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">35%</span>
+                            </div>
+                        </div> 
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                
+                                <span class="skills__name">CSS 3
+                                </span>
+                            </div>
+                            <div class="skills_back">
+                            </div>
+                            <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">90%</span>
+                            </div>
+                        </div>  
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <span class="skills__name">C
+                                </span>
+                            </div>
+                            <div class="skills_back">
+                            </div>
+                            <div class="skills__bar skills__c">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">100%</span>
+                            </div>
+                        </div>   
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                
+                                <span class="skills__name">Python / Django
+                                </span>
+                            </div>
+                            <div class="skills_back">
+                            </div>
+                            <div class="skills__bar skills__python">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">100%</span>
+                            </div>
+                        </div>         
+                    </div>
+                </div>
+            </section>
+
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title"> <strong>Trabalhos</strong></h2>
+
+                <div class="work__container bd-grid">
+                    
+                    <div class="work__img">
+                        <img src="assets/img/work1.jpg" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="assets/img/work2.jpg" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="assets/img/work3.jpg" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="assets/img/work4.jpg" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="assets/img/work5.jpg" alt="">
+                    </div>
+                    <div class="work__img">
+                        <img src="assets/img/work6.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== CONTACT Me =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title"> <strong> Contacto</strong></h2>
+                <p  style="text-align: center; margin-bottom: 2rem;">
+                    Conecte-se a mim para que eu possa fazer a 
+                    diferença em seus projectos.
+                     Eu sou a pessoa que falta na sua equipe!</p>
+                
+                <div class="contact__container bd-grid">
+                    <div class="contact__img">
+                        <img src="assets/img/image-contact.png" alt="ERROR: Imagem nao encontrada!">
+                    </div>
+                    
+                    <div >
+                        
+                        <form action="" class="contact__form">
+                            <input type="text" placeholder="Nome" class="contact__input">
+                            <input type="mail" placeholder="Email" class="contact__input">
+                            <input type="objectivo" placeholder="Objectivo" class="contact__input">
+                            <textarea name="" id="" cols="0" rows="10" class="contact__input">Me diga do que se trata o seu projecto...</textarea>
+                            <input type="button" value="Enviar" class="contact__button button">
+                        </form>
+                      </div>                                   
+                </div>
+
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+             <div class="div_footer">
+                
+                <div class="footer__title div_inline">milenasantanamtv@gmail.com</div>
+                <div class="footer__social div_inline">
+                    <a href="https://www.linkedin.com/in/mlnasantana" class="footer__icon">
+                        <i class='bx bxl-linkedin' ></i>
+                    </a>
+                    <a href="https://github.com/mlnasantana" class="footer__icon">
+                        <i class='bx bxl-github' ></i>
+                    </a>
+                    <a href="https://www.facebook.com/milena.santanaalmeida/" class="footer__icon">
+                        <i class='bx bxl-facebook' ></i>
+                    </a>
+                    
+                </div>
+            </div>
             
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <div class="last_footer">
+                <p>Designed by <a href="https://github.com/mlnasantana">Milena Santana</a></p>
+                <p>Todos os direitos reservados &#169; 2024</p>
+                
+            </div>
             
-            <label for="message">Mensagem:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 Meu Nome</p>
-    </footer>
-    
-    <script src="script.js"></script>
-</body>
+        </footer>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
